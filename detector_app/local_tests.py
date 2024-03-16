@@ -68,7 +68,7 @@ def test_http_endpoint(http_host, eval_data, capsys):
             scores.append(calc_score(labels, predicted_labels))
 
         mean_score = statistics.mean(scores)
-        assert mean_score >= 0.5
+        assert mean_score > 0.5
 
 
 @pytest.mark.run(order=2)
