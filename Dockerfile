@@ -5,4 +5,4 @@ WORKDIR /app
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python3", "detection_server.py"]
+ENTRYPOINT ["python3", "server.py"]

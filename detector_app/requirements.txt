@@ -1,3 +1,6 @@
 flask
+grpcio
+grpcio-tools
+futures
 prometheus_client
 prometheus_flask_exporter
