@@ -12,7 +12,7 @@ from torchvision.models.detection import (
 
 
 def configure_inference_setup():
-    model = maskrcnn_resnet50_fpn(weights=MaskRCNN_ResNet50_FPN_Weights.COCO_V1)
+    model = maskrcnn_resnet50_fpn(weights=MaskRCNN_ResNet50_FPN_Weights.COCO_V1, rpn_score_thresh=0.75)
     model.eval()
 
     to_tensor = transforms.Compose([transforms.PILToTensor()])

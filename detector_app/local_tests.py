@@ -68,7 +68,7 @@ def test_http_endpoint(http_host, eval_data, capsys):
             scores.append(calc_score(labels, predicted_labels))
 
         mean_score = statistics.mean(scores)
-        assert mean_score > 0.4
+        assert mean_score >= 0.5
 
 
 @pytest.mark.run(order=2)
@@ -87,14 +87,13 @@ def test_grpc_endpoint(grpc_host, eval_data, capsys):
                 scores.append(calc_score(labels, predicted_labels))
 
             mean_score = statistics.mean(scores)
-            assert mean_score > 0.4
+            assert mean_score >= 0.5
 
 
 @pytest.mark.run(order=3)
 def test_http_metrics(http_host):
     predict_url = str(furl(http_host) / "predict")
     metrics_url = str(furl(http_host) / "metrics")
-    # img_name, _ = next(iter(eval_data.items()))
     img_name = "000000001268.jpg"
     img_url = get_image_link(img_name)
 

@@ -1,2 +1,4 @@
-./detector_app/__pycache__
-./detector_app/.ipynb_checkpoints
+**/.idea
+**/__pycache__
+**/.ipynb_checkpoints
+**/*.ipynb
