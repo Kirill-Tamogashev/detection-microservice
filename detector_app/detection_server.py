@@ -18,9 +18,7 @@ metrics = PrometheusMetrics(app)
 
 
 def _setup_model():
-    model = maskrcnn_resnet50_fpn_v2(
-        weights=MaskRCNN_ResNet50_FPN_V2_Weights.DEFAULT
-    )
+    model = maskrcnn_resnet50_fpn_v2(weights=MaskRCNN_ResNet50_FPN_V2_Weights)
     model.eval()
     return model
 
